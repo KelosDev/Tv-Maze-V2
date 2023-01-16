@@ -9,6 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Interweave } from "interweave";
+import Footer from "../Components/Footer";
 
 const DetailPage = () => {
   const { showId } = useParams();
@@ -29,44 +30,49 @@ const DetailPage = () => {
   return (
     <>
       {!!showDetail ? (
-        <Card
-          sx={{
-            maxWidth: '400px',
-            justifyContent: "center",
-            alignItem: "center",
-            margin: "2em",
-          }}
-        >
-          <CardMedia
-            component="img"
-            height="100%"
-            image={showDetail?.image}
-            alt={showDetail?.title}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {showDetail?.title}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              <Interweave content={showDetail?.summary} />
-            </Typography>
-            <Typography>Genres: {showDetail?.genres}</Typography>
-            <Typography>Rating: {showDetail?.avgRating}</Typography>
-            <Typography>
-              Start date: {showDetail?.startDate} End:{" "}
-              {!showDetail?.endDate ? showDetail?.endDate : "Not finished"}
-            </Typography>
-          </CardContent>
-        </Card>
+        <div style={{ display: 'flex', justifyContent: 'center', height: '100%' }}>
+
+          <Card
+            sx={{
+              maxWidth: '400px',
+
+              justifyContent: "center",
+              alignItem: "center",
+              margin: "2em",
+            }}
+          >
+            <CardMedia
+              component="img"
+              height="60%"
+              image={showDetail?.image}
+              alt={showDetail?.title}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                {showDetail?.title}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                <Interweave content={showDetail?.summary} />
+              </Typography>
+              <Typography>Genres: {showDetail?.genres}</Typography>
+              <Typography>Rating: {showDetail?.avgRating}</Typography>
+              <Typography>
+                Start date: {showDetail?.startDate} End:{" "}
+                {!showDetail?.endDate ? showDetail?.endDate : "Not finished"}
+              </Typography>
+            </CardContent>
+          </Card>
+        </div>
       ) : (
         "Loading.."
       )}
-
-      <Button variant="contained" href="/"
-        sx={{ marginLeft: '2em' }}
-      >
-        Go back
-      </Button>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '50px' }}>
+        <Button variant="contained" href="/"
+        >
+          Go to search
+        </Button>
+      </div>
+      <Footer />
     </>
   );
 };

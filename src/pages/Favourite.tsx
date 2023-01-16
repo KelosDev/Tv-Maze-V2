@@ -4,6 +4,7 @@ import useFirebaseFavourite from "../Context/useFirebaseFavourite";
 import { Link } from "react-router-dom";
 import Favorite from "@mui/icons-material/Favorite";
 import { red } from "@mui/material/colors";
+import Footer from "../Components/Footer";
 
 const Favourite = () => {
   const [favourites, addToFavourite, removeFromFavourite] =
@@ -102,6 +103,7 @@ const Favourite = () => {
           ))}
         </Grid>
       </Grid>
+      <Footer />
     </>
   );
 };

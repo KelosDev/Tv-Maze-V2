@@ -19,9 +19,16 @@ function Login() {
   }, [navigate, currentUser]);
 
   return (
-    <>
 
-      <h1 style={{ textAlign: 'center' }}>Sign-in for more content</h1>
+
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      height: '1080px'
+    }}>
+
+      <h3 style={{ color: 'white', position: 'relative', marginTop: '50px', letterSpacing: '1px' }}>SIGN IN FOR MORE CONTENTS</h3>
 
       <GoogleButton
         style={{
@@ -29,12 +36,14 @@ function Login() {
           marginRight: "auto",
           marginBottom: 15,
           marginLeft: "auto",
-          backgroundColor: '#181d31'
+          backgroundColor: '#181d31',
+          position: 'relative',
+
         }}
         onClick={signInWithGoogle}
       />
+    </div>
 
-    </>
   );
 }
 

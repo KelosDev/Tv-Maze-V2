@@ -13,6 +13,7 @@ import useFirebaseFavourite from "../Context/useFirebaseFavourite";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
 import { red } from "@mui/material/colors";
+import Footer from "../Components/Footer";
 
 const SearchPage = () => {
   const [currentSearch, setCurrentSearch] = useSearchParams();
@@ -74,7 +75,7 @@ const SearchPage = () => {
           <Paper
             component="form"
             sx={{ display: "flex", alignItems: "center" }}
-            style={{ padding: "2em" }}
+            style={{ padding: "2em", width: '400px' }}
             autoComplete="off"
             onSubmit={(e) => {
               e.preventDefault();
@@ -89,7 +90,10 @@ const SearchPage = () => {
                 autoFocus
               />
             </FormControl>
-            <FormControl>
+            <FormControl
+              style={{
+                right: '-100px'
+              }}>
               <Button
                 disabled={isSearchButtonDisabled()}
                 onClick={handleOnSearch}
@@ -99,11 +103,9 @@ const SearchPage = () => {
             </FormControl>
           </Paper>
         </Grid>
-
         <Grid
           container
           justifyContent="center"
-          style={{ minHeight: "100vh", padding: "2em", width: "100%" }}
         >
           {shows.map((el: any) => (
             <div
@@ -159,6 +161,7 @@ const SearchPage = () => {
           ))}
         </Grid>
       </Grid>
+      <Footer />
     </>
   );
 };
