@@ -70,7 +70,7 @@ const SearchPage = () => {
   return (
     <>
       <Grid container justifyContent="center" style={{ height: "100vh" }}>
-        <Grid item style={{ padding: "2em", width: "100%" }}>
+        <Grid item style={{ padding: "2em" }}>
           <Paper
             component="form"
             sx={{ display: "flex", alignItems: "center" }}
@@ -130,15 +130,22 @@ const SearchPage = () => {
                   checked={!!favourites.find((d) => el.id === d.id)}
                 />
               </div>
-              <figure className="card__thumb">
+              <figure className="card__thumb" style={{
+                display: 'flex',
+                justifyContent: 'center',
+              }}>
                 <img src={el.image} alt="" className="card__image" />
                 <figcaption className="card__caption">
-                  <Link to={el.id.toString()}>
+                  <Link to={el.id.toString()}
+                    style={{
+                      textDecoration: 'none'
+                    }}
+                  >
                     <Button
                       variant="contained"
                       style={{
                         borderRadius: 35,
-                        backgroundColor: red[300],
+                        backgroundColor: "#FF5733",
                         padding: "9px 18px",
                         fontSize: "15px"
                       }}

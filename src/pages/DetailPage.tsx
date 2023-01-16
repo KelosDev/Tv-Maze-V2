@@ -4,7 +4,6 @@ import { getShowsById, ShowDetailType } from "../Api";
 import {
   Button,
   Card,
-  CardActions,
   CardContent,
   CardMedia,
   Typography,

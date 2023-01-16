@@ -12,8 +12,6 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import LogoutIcon from '@mui/icons-material/Logout';
-import SearchIcon from '@mui/icons-material/Search';
-import Star from '@mui/icons-material/Star';
 
 const pages = [
   'Favourite', 'Search'
@@ -117,10 +115,9 @@ function ResponsiveAppBar() {
           <Button onClick={logOut}>
             <LogoutIcon sx={{ color: 'white', padding: '0px' }}></LogoutIcon>
           </Button>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'end' }}>
             {pages.map((page) => (
               <Button
-                // key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block', }}
               >

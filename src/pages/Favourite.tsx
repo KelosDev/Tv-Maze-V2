@@ -72,16 +72,21 @@ const Favourite = () => {
                   checked={!!favourites.find((d) => el.id === d.id)}
                 />
               </div>
-              <figure className="card__thumb">
+              <figure className="card__thumb" >
                 <img src={el.image} alt="" className="card__image" />
-                <figcaption className="card__caption">
-                  <h2 className="card__title">{el.title}</h2>
-                  <Link to={"/search/" + el.id.toString()}>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+
+                  }}>
+                  <Link to={"/search/" + el.id.toString()}
+                    style={{ textDecoration: 'none' }}>
                     <Button
                       variant="contained"
                       style={{
                         borderRadius: 35,
-                        backgroundColor: "#634b66",
+                        backgroundColor: "#FF5733",
                         padding: "9px 18px",
                         fontSize: "15px",
                         top: '-90px',
@@ -90,7 +95,7 @@ const Favourite = () => {
                       Details
                     </Button>
                   </Link>
-                </figcaption>
+                </div>
               </figure>
             </div>
           ))}
