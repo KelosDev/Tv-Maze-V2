@@ -78,6 +78,7 @@ const Favourite = () => {
                   style={{
                     display: 'flex',
                     justifyContent: 'center',
+                    width: '300px'
 
                   }}>
                   <Link to={"/search/" + el.id.toString()}

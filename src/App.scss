@@ -20,10 +20,6 @@ $desktop: 1024px;
     position: relative;
     max-height: 400px;
     overflow: hidden;
-
-    @include breakpoint(desktop) {
-      max-height: 500px;
-    }
   }
 
   &__image {
