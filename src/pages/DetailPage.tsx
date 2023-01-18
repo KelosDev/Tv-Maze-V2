@@ -9,7 +9,6 @@ import {
   Typography,
 } from "@mui/material";
 import { Interweave } from "interweave";
-import Footer from "../Components/Footer";
 
 const DetailPage = () => {
   const { showId } = useParams();
@@ -72,7 +71,6 @@ const DetailPage = () => {
           Go to search
         </Button>
       </div>
-      <Footer />
     </>
   );
 };

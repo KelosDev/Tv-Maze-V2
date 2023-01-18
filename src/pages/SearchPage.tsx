@@ -13,7 +13,7 @@ import useFirebaseFavourite from "../Context/useFirebaseFavourite";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
 import { red } from "@mui/material/colors";
-import Footer from "../Components/Footer";
+
 
 const SearchPage = () => {
   const [currentSearch, setCurrentSearch] = useSearchParams();
@@ -161,7 +161,7 @@ const SearchPage = () => {
           ))}
         </Grid>
       </Grid>
-      <Footer />
+
     </>
   );
 };

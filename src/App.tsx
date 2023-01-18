@@ -8,7 +8,7 @@ import SearchPage from "./pages/SearchPage";
 import DetailPage from "./pages/DetailPage";
 import Favourite from "./pages/Favourite";
 import Navbar from "./Components/navbar";
-import Footer from "./Components/Footer"
+
 
 import Protected from "./router/protected";
 
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     element: (
       <Protected>
         <Navbar></Navbar>
-        <Footer></Footer>
+
         <SearchPage />
       </Protected>
     ),
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
     element: (
       <Protected>
         <Navbar></Navbar>
-        <Footer></Footer>
+
         <DetailPage />
       </Protected>
     ),
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
     element: (
       <Protected>
         <Navbar></Navbar>
-        <Footer></Footer>
+
         <Favourite />
       </Protected>
     ),
