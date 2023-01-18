@@ -75,7 +75,7 @@ const SearchPage = () => {
           <Paper
             component="form"
             sx={{ display: "flex", alignItems: "center" }}
-            style={{ padding: "2em", width: '400px' }}
+            style={{ padding: "2em" }}
             autoComplete="off"
             onSubmit={(e) => {
               e.preventDefault();
@@ -90,10 +90,7 @@ const SearchPage = () => {
                 autoFocus
               />
             </FormControl>
-            <FormControl
-              style={{
-                right: '-100px'
-              }}>
+            <FormControl>
               <Button
                 disabled={isSearchButtonDisabled()}
                 onClick={handleOnSearch}

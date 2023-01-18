@@ -34,7 +34,7 @@ const DetailPage = () => {
           <Card
             sx={{
               maxWidth: '400px',
-
+              height: '100%',
               justifyContent: "center",
               alignItem: "center",
               margin: "2em",
